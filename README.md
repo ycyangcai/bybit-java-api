@@ -247,6 +247,13 @@ var client = BybitApiClientFactory.newInstance("YOUR_API_KEY", "YOUR_API_SECRET"
 client.getPrivateChannelStream(List.of("order"), BybitApiConfig.V5_PRIVATE);
 ```
 
+### 个人修改
+1. 删除运行不成功的错误。
+2. 运行jar代码：install -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dskip.gpg=true -f pom.xml
+3. 部署jar代码：deploy -Dmaven.test.skip=true -Dmaven.javadoc.skip=true -Dskip.gpg=true -f pom.xml
+4. 增加affiliate相关的功能
+
+
 ## Contact
 For support, join our Bybit API community on [Telegram](https://t.me/Bybitapi).
 

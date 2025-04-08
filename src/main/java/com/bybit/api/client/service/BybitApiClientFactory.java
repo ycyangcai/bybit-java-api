@@ -403,4 +403,8 @@ public class BybitApiClientFactory {
     public WebsocketStreamClient newWebsocketClient(int pingInterval, String maxAliveTime, WebSocketMessageCallback messageHandler) {
         return new WebsocketStreamClientImpl(apiKey, secret, baseUrl, pingInterval, maxAliveTime, debugMode, logOption, messageHandler);
     }
+
+    public BybitApiAffiliateRestClient newAffiliateRestClient() {
+        return new BybitApiAffiliateRestClientImpl(apiKey, secret, baseUrl, debugMode, recvWindow, logOption);
+    }
 }

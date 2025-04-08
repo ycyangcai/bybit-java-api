@@ -5660,4 +5660,18 @@ public interface BybitApiService {
             @Query("limit") String limit,
             @Query("cursor") String cursor
     );
+
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/affiliate/aff-user-list")
+    Call<Object> affUserList(
+            @Query("cursor") String cursor,
+            @Query("size") Integer size,
+            @Query("needDeposit") Boolean needDeposit,
+            @Query("need30") Boolean need30,
+            @Query("need365") Boolean need365
+    );
+
+    @Headers(BybitApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER)
+    @GET("/v5/user/aff-customer-info")
+    Call<Object> affCustomerInfo(@Query("uid") String uid);
 }
