@@ -12,7 +12,7 @@ import java.util.Map;
 public class AffiliateExample {
     public static void main(String[] args) {
 
-        BybitApiAffiliateRestClient client = BybitApiClientFactory.newInstance("H4bgsceeI3DKQbXpGS", "hpa8kSB5tbJQNBvhlB4frXPZWVWf9VNF3hoi", BybitApiConfig.MAINNET_DOMAIN).newAffiliateRestClient();
+        BybitApiAffiliateRestClient client = BybitApiClientFactory.newInstance("111", "222", BybitApiConfig.MAINNET_DOMAIN).newAffiliateRestClient();
         System.out.println(client);
         AffiliateDataRequest affUserListRequest = AffiliateDataRequest.builder().size(1000).build();
         Object affUserList = client.affUserList(affUserListRequest);
