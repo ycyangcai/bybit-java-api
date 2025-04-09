@@ -159,7 +159,7 @@
                                 <name>GitHub Packages Repository</name>
                                 <url>https://maven.pkg.github.com/VictorFrWu/bybit-java-api</url>
                             </repository>
-          -->
+
                            <snapshotRepository>
                                <id>ossrh</id>
                                <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
@@ -168,6 +168,7 @@
                                <id>ossrh</id>
                                <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                            </repository>
+                              -->
 
     </distributionManagement>
 
@@ -200,7 +201,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Nexus Repository Manager -->
+            <!-- Nexus Repository Manager
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
@@ -212,6 +213,7 @@
                     <autoReleaseAfterClose>true</autoReleaseAfterClose>
                 </configuration>
             </plugin>
+-->
 
             <!-- Javadoc and Sources Attachments -->
             <plugin>
