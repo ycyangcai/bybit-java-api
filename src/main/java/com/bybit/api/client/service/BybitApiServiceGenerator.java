@@ -41,9 +41,9 @@ public class BybitApiServiceGenerator {
         sharedClient = new OkHttpClient.Builder()
                 .dispatcher(dispatcher)
                 .pingInterval(20, TimeUnit.SECONDS)
-                .connectTimeout(1, TimeUnit.MILLISECONDS)
-                .readTimeout(1, TimeUnit.MILLISECONDS)
-                .writeTimeout(1, TimeUnit.MILLISECONDS)
+                .connectTimeout(5_000, TimeUnit.MILLISECONDS)
+                .readTimeout(10_000, TimeUnit.MILLISECONDS)
+                .writeTimeout(10_000, TimeUnit.MILLISECONDS)
                 .build();
     }
 
@@ -78,9 +78,9 @@ public class BybitApiServiceGenerator {
         if (!StringUtils.isEmpty(apiKey) && !StringUtils.isEmpty(secret)) {
             AuthenticationInterceptor interceptor = new AuthenticationInterceptor(apiKey, secret, recvWindow, referer);
             clientBuilder.addInterceptor(interceptor);
-            clientBuilder.connectTimeout(1, TimeUnit.MILLISECONDS);
-            clientBuilder.readTimeout(1, TimeUnit.MILLISECONDS);
-            clientBuilder.writeTimeout(1, TimeUnit.MILLISECONDS);
+            clientBuilder.connectTimeout(5_1000, TimeUnit.MILLISECONDS);
+            clientBuilder.readTimeout(10_000, TimeUnit.MILLISECONDS);
+            clientBuilder.writeTimeout(10_1000, TimeUnit.MILLISECONDS);
         }
         if (debugMode) {
             HandleLoggingInterceptor(clientBuilder, logOption);
