@@ -78,9 +78,9 @@ public class BybitApiServiceGenerator {
         if (!StringUtils.isEmpty(apiKey) && !StringUtils.isEmpty(secret)) {
             AuthenticationInterceptor interceptor = new AuthenticationInterceptor(apiKey, secret, recvWindow, referer);
             clientBuilder.addInterceptor(interceptor);
-            clientBuilder.connectTimeout(5_1000, TimeUnit.MILLISECONDS);
+            clientBuilder.connectTimeout(5_000, TimeUnit.MILLISECONDS);
             clientBuilder.readTimeout(10_000, TimeUnit.MILLISECONDS);
-            clientBuilder.writeTimeout(10_1000, TimeUnit.MILLISECONDS);
+            clientBuilder.writeTimeout(10_000, TimeUnit.MILLISECONDS);
         }
         if (debugMode) {
             HandleLoggingInterceptor(clientBuilder, logOption);
